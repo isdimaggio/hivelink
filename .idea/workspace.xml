@@ -4,6 +4,7 @@
     <list default="true" id="eb178b7a-ea89-4098-8735-5b69afff6f6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
@@ -57,7 +58,7 @@
       <updated>1676540414335</updated>
       <workItem from="1676540416609" duration="10106000" />
       <workItem from="1676622890470" duration="302000" />
-      <workItem from="1676627358611" duration="1242000" />
+      <workItem from="1676627358611" duration="4436000" />
     </task>
     <servers />
   </component>
