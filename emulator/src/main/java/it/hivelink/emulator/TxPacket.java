@@ -1,4 +1,4 @@
-package it.hivelink;
+package it.hivelink.emulator;
 
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONObject;
