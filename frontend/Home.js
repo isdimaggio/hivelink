@@ -1,6 +1,15 @@
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, Switch } from 'react-native';
+import React, { useState } from 'react';
+import {Picker} from '@react-native-picker/picker'
 
  function Home({navigation}) {
+
+    const options = [
+        { label: 'Opzione 1', value: 'opzione1' },
+        { label: 'Opzione 2', value: 'opzione2' },
+        { label: 'Opzione 3', value: 'opzione3' },
+      ];
+    
 
     const [selectedOption, setSelectedOption] = useState(options[0].value);
     const [isEnabled, setIsEnabled] = useState(false);
@@ -50,6 +59,19 @@ import { StyleSheet, Text, View, Button, Alert } from 'react-native';
             </View>
 
             <Text>Sei nella Home</Text>  
+            <Picker
+                selectedValue={selectedOption}
+                onValueChange={(itemValue, itemIndex) =>
+                    setSelectedOption(itemValue)
+                }>
+                {options.map(option => (
+                    <Picker.Item
+                    key={option.value}
+                    label={option.label}
+                    value={option.value}
+                    />
+                ))}
+            </Picker>
             <Button
                 title = "dettagli"
                 onPress = {NavigateGraph}
