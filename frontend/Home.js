@@ -1,14 +1,4 @@
-import { StyleSheet, Text, View, Button, Alert, Image, Switch} from 'react-native';
-import {Picker} from '@react-native-picker/picker';
-import { useState } from 'react';
-
-
-const options = [
-    { label: 'Opzione 1', value: 'opzione1' },
-    { label: 'Opzione 2', value: 'opzione2' },
-    { label: 'Opzione 3', value: 'opzione3' },
-  ];
-
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
  function Home({navigation}) {
 
@@ -30,25 +20,36 @@ const options = [
 
     return(
         <View>
+             <View style={styles.tableRow}>
+                <View style={styles.tableCell}><Text>1</Text></View>
+                <View style={styles.tableCell}><Text>2</Text></View>
+                <View style={styles.tableCell}><Text>3</Text></View>
+                <View style={styles.tableCell}><Text>4</Text></View>
+                <View style={styles.tableCell}><Text>5</Text></View>
+            </View>
+            <View style={styles.tableRow}>
+                <View style={styles.tableCell}><Text>6</Text></View>
+                <View style={styles.tableCell}><Text>7</Text></View>
+                <View style={styles.tableCell}><Text>8</Text></View>
+                <View style={styles.tableCell}><Text>9</Text></View>
+                <View style={styles.tableCell}><Text>10</Text></View>
+            </View>
+            <View style={styles.tableRow}>
+                <View style={styles.tableCell}><Text>11</Text></View>
+                <View style={styles.tableCell}><Text>12</Text></View>
+                <View style={styles.tableCell}><Text>13</Text></View>
+                <View style={styles.tableCell}><Text>14</Text></View>
+                <View style={styles.tableCell}><Text>15</Text></View>
+            </View>
+            <View style={styles.tableRow}>
+                <View style={styles.tableCell}><Text>11</Text></View>
+                <View style={styles.tableCell}><Text>12</Text></View>
+                <View style={styles.tableCell}><Text>13</Text></View>
+                <View style={styles.tableCell}><Text>14</Text></View>
+                <View style={styles.tableCell}><Text>15</Text></View>
+            </View>
+
             <Text>Sei nella Home</Text>  
-            <Picker
-                selectedValue={selectedOption}
-                onValueChange={(itemValue, itemIndex) =>
-                    setSelectedOption(itemValue)
-                }>
-                {options.map(option => (
-                    <Picker.Item
-                    key={option.value}
-                    label={option.label}
-                    value={option.value}
-                    />
-                ))}
-            </Picker>
-            <Image
-                source = {{
-                    uri: 'https://reactnative.dev/img/tiny_logo.png'
-                }}
-            />
             <Button
                 title = "dettagli"
                 onPress = {NavigateGraph}
@@ -67,5 +68,22 @@ const options = [
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    tableRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        marginBottom: 1,
+    },
+    tableCell: {
+        flex: 1,
+        height: 50,
+        borderWidth: 1,
+        borderColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
 
 export default Home;
