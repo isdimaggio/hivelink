@@ -1,2 +1,8 @@
 .idea
 node_modules
+emulator/target/classes/it/hivelink/Emulator.class
+emulator/target/classes/it/hivelink/Main.class
+emulator/target/classes/it/hivelink/Utilities.class
+emulator/target/classes/it/hivelink/TxThread.class
+emulator/target/classes/it/hivelink/TxPacket.class
+emulator/target/classes/it/hivelink/RxHandler.class

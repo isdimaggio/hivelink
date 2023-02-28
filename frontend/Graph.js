@@ -1,19 +1,61 @@
 import { StyleSheet, View } from 'react-native';
-import { VictoryBar, VictoryChart, VictoryTheme } from "victory-native";
+import { VictoryLine, VictoryChart, VictoryTheme } from "victory-native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const data = [
-    { quarter: 1, earnings: 13000 },
-    { quarter: 2, earnings: 16500 },
-    { quarter: 3, earnings: 14250 },
-    { quarter: 4, earnings: 19000 }
-  ];
+  const Tab = createBottomTabNavigator();
 
 function Graph () {
 
     return(
+      <Tab.Navigator>
+        <Tab.Screen name="Temperatura" component={Temperature} />
+        <Tab.Screen name="Umidità" component={Umidity} />
+        <Tab.Screen name="Peso" component={Weight} />
+      </Tab.Navigator>
+    );
+}
+
+const Weight = () => {
+  let data = [];
+  for(let i = 0; i < 10; i++){
+    data.push({ora: i, temperatura: i + 2});
+  }
+
+    return(
         <View style={styles.container}>
         <VictoryChart width={350} theme={VictoryTheme.material}>
-          <VictoryBar data={data} x="quarter" y="earnings" />
+          <VictoryLine data={data} x="ora" y="temperatura" />
+        </VictoryChart>
+      </View>
+    );
+}
+
+const Umidity = () => {
+  let data = [];
+  for(let i = 0; i < 10; i++){
+    data.push({ora: i, temperatura: i});
+  }
+
+    return(
+        <View style={styles.container}>
+        <VictoryChart width={350} theme={VictoryTheme.material}>
+          <VictoryLine data={data} x="ora" y="temperatura" />
+        </VictoryChart>
+      </View>
+    );
+}
+
+const Temperature = () => {
+
+  let data = [];
+  for(let i = 0; i < 10; i++){
+    data.push({ora: i, temperatura: i*i});
+  }
+
+    return(
+        <View style={styles.container}>
+        <VictoryChart width={350} theme={VictoryTheme.material}>
+          <VictoryLine data={data} x="ora" y="temperatura" />
         </VictoryChart>
       </View>
     );
