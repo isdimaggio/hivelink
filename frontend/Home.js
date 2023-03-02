@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Button, Alert, Switch } from 'react-native';
 import React, { useState } from 'react';
-import {Picker} from '@react-native-picker/picker'
+import {Picker} from '@react-native-picker/picker';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
  function Home({navigation}) {
 
@@ -9,7 +10,7 @@ import {Picker} from '@react-native-picker/picker'
         { label: 'Opzione 2', value: 'opzione2' },
         { label: 'Opzione 3', value: 'opzione3' },
       ];
-    
+
 
     const [selectedOption, setSelectedOption] = useState(options[0].value);
     const [isEnabled, setIsEnabled] = useState(false);
@@ -27,38 +28,26 @@ import {Picker} from '@react-native-picker/picker'
         navigation.navigate('Aggiungi Arnia');
     }
 
-    return(
+
+     const tableData = [
+         ['Name', 'Age', 'Gender'],
+         ['John', '30', 'Male'],
+         ['Jane', '25', 'Female'],
+         ['Bob', '40', 'Male']
+     ];
+
+
+     return(
+
         <View>
-             <View style={styles.tableRow}>
-                <View style={styles.tableCell}><Text>1</Text></View>
-                <View style={styles.tableCell}><Text>2</Text></View>
-                <View style={styles.tableCell}><Text>3</Text></View>
-                <View style={styles.tableCell}><Text>4</Text></View>
-                <View style={styles.tableCell}><Text>5</Text></View>
-            </View>
-            <View style={styles.tableRow}>
-                <View style={styles.tableCell}><Text>6</Text></View>
-                <View style={styles.tableCell}><Text>7</Text></View>
-                <View style={styles.tableCell}><Text>8</Text></View>
-                <View style={styles.tableCell}><Text>9</Text></View>
-                <View style={styles.tableCell}><Text>10</Text></View>
-            </View>
-            <View style={styles.tableRow}>
-                <View style={styles.tableCell}><Text>11</Text></View>
-                <View style={styles.tableCell}><Text>12</Text></View>
-                <View style={styles.tableCell}><Text>13</Text></View>
-                <View style={styles.tableCell}><Text>14</Text></View>
-                <View style={styles.tableCell}><Text>15</Text></View>
-            </View>
-            <View style={styles.tableRow}>
-                <View style={styles.tableCell}><Text>11</Text></View>
-                <View style={styles.tableCell}><Text>12</Text></View>
-                <View style={styles.tableCell}><Text>13</Text></View>
-                <View style={styles.tableCell}><Text>14</Text></View>
-                <View style={styles.tableCell}><Text>15</Text></View>
+            <View style={styles.container}>
+                <Table>
+                    <Row data={tableData[0]} style={styles.head} textStyle={styles.text} />
+                    <Rows data={tableData.slice(1)} textStyle={styles.text} />
+                </Table>
             </View>
 
-            <Text>Sei nella Home</Text>  
+            <Text>Sei nella Home</Text>
             <Picker
                 selectedValue={selectedOption}
                 onValueChange={(itemValue, itemIndex) =>
@@ -92,20 +81,9 @@ import {Picker} from '@react-native-picker/picker'
 }
 
 const styles = StyleSheet.create({
-    tableRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        marginBottom: 1,
-    },
-    tableCell: {
-        flex: 1,
-        height: 50,
-        borderWidth: 1,
-        borderColor: 'black',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+    head: { height: 40, backgroundColor: '#f1f8ff' },
+    text: { margin: 6 }
 });
 
 export default Home;
