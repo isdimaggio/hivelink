@@ -29,11 +29,16 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
     }
 
 
+    // problema da risolvere: dopo la prima riga non viene mostrata
      const tableData = [
-         ['Name', 'Age', 'Gender'],
-         ['John', '30', 'Male'],
-         ['Jane', '25', 'Female'],
-         ['Bob', '40', 'Male']
+         ['1', '2', '3', '4', <Button
+             title = "dettagli"
+             onPress = {NavigateGraph}
+         />],
+         ['1', '2', '3', '4', '5'],
+         ['1', '2', '3', '4', '5'],
+         ['1', '2', '3', '4', '5'],
+         ['1', '2', '3', '4', '5']
      ];
 
 
@@ -47,7 +52,6 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
                 </Table>
             </View>
 
-            <Text>Sei nella Home</Text>
             <Picker
                 selectedValue={selectedOption}
                 onValueChange={(itemValue, itemIndex) =>
@@ -83,7 +87,7 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 const styles = StyleSheet.create({
     container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
     head: { height: 40, backgroundColor: '#f1f8ff' },
-    text: { margin: 6 }
+    text: { margin: 6 , color: '#000000' }
 });
 
 export default Home;

@@ -1,4 +1,4 @@
-package it.hivelink;
+package it.hivelink.emulator;
 
 class TxThread extends Thread {
     private Thread t;

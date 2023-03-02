@@ -1,4 +1,4 @@
-package it.hivelink;
+package it.hivelink.emulator;
 
 import org.json.JSONObject;
 
