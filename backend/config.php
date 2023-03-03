@@ -7,6 +7,5 @@ $GLOBAL_CONFIG = array(
     "DB_USER" => "hivelink",
     "DB_PASS" => "hivelink",
     "DB_NAME" => "hivelink",
-    "MQHT_ADDRESS" => "localhost:8001",
     "MQHT_PSK" => "token" // pre shared key
 );
