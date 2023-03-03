@@ -2,4 +2,4 @@
 
 require "../init.php";
 
-HL_BrowserResponse(false, 200, "test ok!");
+HL_BrowserResponse("test ok!");

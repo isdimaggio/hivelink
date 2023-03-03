@@ -1,3 +1,4 @@
 <?php
 
-require "json.php";
+require "response.php";
+require "bearer.php";

@@ -5,15 +5,16 @@
     http status code and payload
 */
 function HL_BrowserResponse(
+    $payload = array(),
     bool $isError = false,
-    int $responseCode = 200,
-    $payload
+    int $responseCode = 200
 ){
     $response = array(
-        "status" => $isError ? "success" : "error",
+        "status" => $isError ? "error" : "success",
         "payload" => $payload
     );
-
+    
+    header("Content-Type: application/json");
     http_response_code($responseCode);
 
     die(
