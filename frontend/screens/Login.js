@@ -1,36 +1,48 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Alert} from 'react-native';
+import axios from 'axios';
+import { Singleton } from '../utils/Singleton';
 
 function Login({navigation}) {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    let s = new Singleton();
+
+    const instance = axios.create({
+        baseURL: 'https://xpe.mrbackslash.it/hivelink/api',
+      });
 
     const handleLogin = () => {
-        navigation.navigate('Home');
-        setIsLoggedIn(true);
+
+        instance.post('/rest_login.php',
+            {
+                email: email,
+                password: password,
+            }
+        )
+        .then((response) => {
+            navigation.navigate('Home');
+            const data = response.data;
+            s.setToken(data.payload);
+        })
+        .catch(() => {
+            Alert.alert("Errore","credenziali errate!");
+          });
     };
 
     const handleLogout = () => {
         navigation.navigate('Login');
         setIsLoggedIn(false);
     };
-    if (isLoggedIn) {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>Welcome to the app!</Text>
-                <Button title="Logout" onPress={handleLogout} />
-            </View>
-        );
-    } else {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Login to the app</Text>
                 <TextInput
                     style={styles.input}
-                    placeholder="Username"
-                    value={username}
-                    onChangeText={setUsername}
+                    placeholder="email"
+                    value={email}
+                    onChangeText={setEmail}
                 />
                 <TextInput
                     style={styles.input}
@@ -42,9 +54,7 @@ function Login({navigation}) {
                 <Button title="Login" onPress={handleLogin} />
             </View>
         );
-    }
-
-};
+    };
 
 
 const styles = StyleSheet.create({

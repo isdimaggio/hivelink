@@ -105,5 +105,3 @@ const styles = StyleSheet.create({
         btn: { width: 58, height: 18, marginLeft: 15, backgroundColor: '#c8e1ff', borderRadius: 2 },
         btnText: { textAlign: 'center' }
 });
-
-export default Home;
