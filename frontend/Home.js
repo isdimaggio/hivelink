@@ -33,15 +33,36 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 
      const tableData = [
          [<Button title = "dettagli" onPress = {NavigateGraph} />],
+         [<Button title = "aggiungi arnia" onPress = {navigateAddHive}/>],
          [<Button title = "dettagli" onPress = {NavigateGraph} />],
-         [<Button title = "dettagli" onPress = {NavigateGraph} />],
-         [<Button title = "dettagli" onPress = {NavigateGraph} />],
+         [<Switch
+             trackColor={{false: '#767577', true: '#81b0ff'}}
+             thumbColor={isEnabled ? '#ff00ff' : '#f0ff0f'}
+             ios_backgroundColor="#3e3e3e"
+             onValueChange={toggleSwitch}
+             value={isEnabled}
+         />],
 
      ];
 
 
      return(
          <View >
+
+             <Picker
+                 selectedValue={selectedOption}
+                 onValueChange={(itemValue, itemIndex) =>
+                     setSelectedOption(itemValue)
+                 }>
+                 {options.map(option => (
+                     <Picker.Item
+                         key={option.value}
+                         label={option.label}
+                         value={option.value}
+                     />
+                 ))}
+             </Picker>
+
             <View style={styles.container}>
                 <Table style={{flexDirection: 'row'}} borderStyle={{borderWidth: 1}}>
 
@@ -58,36 +79,6 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
                 </Table>
             </View>
 
-     <View >
-     <Picker
-         selectedValue={selectedOption}
-         onValueChange={(itemValue, itemIndex) =>
-             setSelectedOption(itemValue)
-         }>
-         {options.map(option => (
-             <Picker.Item
-                 key={option.value}
-                 label={option.label}
-                 value={option.value}
-             />
-         ))}
-     </Picker>
-     <Button
-         title = "dettagli"
-         onPress = {NavigateGraph}
-     />
-     <Button
-         title = "aggiungi arnia"
-         onPress = {navigateAddHive}
-     />
-     <Switch
-         trackColor={{false: '#767577', true: '#81b0ff'}}
-         thumbColor={isEnabled ? '#ff00ff' : '#f0ff0f'}
-         ios_backgroundColor="#3e3e3e"
-         onValueChange={toggleSwitch}
-         value={isEnabled}
-     />
- </View>
          </View>
 
 
