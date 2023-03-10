@@ -2,10 +2,10 @@
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Login from './Login';
-import Graph from './Graph';
-import Home from './Home';
-import AddHive from './AddHive';
+import Login from './screens/Login';
+import Graph from './screens/Graph';
+import Home from './screens/Home';
+import AddHive from './screens/AddHive';
 
 const Stack = createNativeStackNavigator();
 
