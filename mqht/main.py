@@ -4,12 +4,14 @@ import json
 import time
 import requests
 import paho.mqtt.client as mqttClient
+from threading import Thread
 
 BROKER_ADDRESS = os.getenv("BROKER_ADDRESS")
 BROKER_PORT = os.getenv("BROKER_PORT")
 BROKER_USERNAME = os.getenv("BROKER_USERNAME")
 BROKER_PASSWORD = os.getenv("BROKER_PASSWORD")
 BACKEND = os.getenv("BACKEND")
+BACKEND_CRON = os.getenv("BACKEND_CRON")
 MQHT_PSK = os.getenv("MQHT_PSK")
 
 HEADERS = {"Authorization": "Bearer " + MQHT_PSK}
@@ -17,6 +19,13 @@ HEADERS = {"Authorization": "Bearer " + MQHT_PSK}
 topic_sub = "hivelink/telemetry/#"
 client_id = f'mqht_{random.randint(0, 1000)}'
 Connected = False  # global variable for the state of the connection
+
+
+def cron():
+    while True:
+        r = requests.post(BACKEND_CRON, json = {}, headers=HEADERS)
+        print("cron said: " + r.text)
+        time.sleep(60)
 
 
 def on_connect(client, userdata, flags, rc):
@@ -71,6 +80,10 @@ def run():
         time.sleep(0.1)
 
     client.subscribe(topic_sub)
+    t1 = Thread(target=cron)
+
+    # start the threads
+    t1.start()
 
     try:
         while True:

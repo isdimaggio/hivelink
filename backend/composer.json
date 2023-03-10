@@ -1,0 +1,6 @@
+{
+    "require": {
+        "firebase/php-jwt": "^6.4",
+        "php-mqtt/client": "^1.8"
+    }
+}

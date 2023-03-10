@@ -2,6 +2,7 @@
 
 require "config.php";
 require "util/inc.php"; # imports all utility functions
+require "vendor/autoload.php"; # imports all composer libraries
 
 error_reporting(E_ERROR);
 
