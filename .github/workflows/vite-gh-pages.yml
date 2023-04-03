@@ -27,9 +27,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-      working-directory: ./app
+      working-directory: ./hivelink-lite
     - run: npm run build --if-present
-      working-directory: ./app
+      working-directory: ./hivelink-lite
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
