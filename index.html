@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="it" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiveLink</title>
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-c3db2f0e.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACtVBMVEUAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////fn/9t7/9Nn/9Nj/+u3/5qX/wB//vxr/vxv/vhj/0FX/+/L/6bD/xzb/xTL/xjL/xTH/xS//1Wj//PT/8Mr/4pn/4pb/3Yf/3IX/3IP/3IT/4JD/4pj/5aT/+uz//PX/ykT/twD/uAL/uQP/uAP/45r//vv/23z/xTD/yT3/7sL//vz/7Lv/34//3Yj/2Xj/2Xf/2Hb/2nz/2Xr/2HX/237/347/4pf/8c7/vx7/uQT/uQX/vRL/vA7/z1P/xzf/vhT/0Vr//fj/7cH/uAD/xzn/13D/02P/wSH/uAH/ykP//PP/3YX/zU7/zU3/zUv/4JH/2Hj/24T/3Yr/zlH/0Fj///7/7Lz/1m3/1Gb/02H/02D/0l//0lz/02L/24H/7L3/+/H/+er/3o3/02T/1Wb/23//9+L/9dz/win/twH/wBz/z1T/5J3/9dv/zEv/3or/vRT/1Wn//v3/78j/vBH/uQb/ykL/8tH/y0f/vx3/y0X//ff/+u7/0Fb/vA//vBD/vRH/wR//+u//vxn/78T/5qn/4JL/4ZT/6rb/++//4Zf/6rf//vr/0mD//Pb/9+P/vxz/ugr/wiX/7b//24D/yDn/zEr/wBv/wB7/wB3/wif/xCv/1Wz/wij/wSD/3Yb/24L/ugn/uw3/5aL/1Wv/wiT/wSP/wCD/wyr/67f/9t//89X/4Zb/2n7/2Xn/3IL/6bH/9d3/9+X/1Gf/6K5RCF32AAAAMHRSTlMAAAVCoeD6++OmRwcUievukhio/rIZBJXq70+w3+zitUjt8lUGnQm7HvHznghOtgr8l3GnAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+cEAwgyHNfC0TIAAAI2SURBVDjLY2BgYGRiZmFlM0AD7BycXNyMDEBpRh5ePgOsgF9AkJGRgZFHSNgAFxARZWQQ48Utb2Agzs3ALIHgGhoZG5sYmyIpkJRiYEHimplbWFpYWdsgCUkzyCDxbO3sHRydnF2QhGQZ4P5zdXNz9/D09PL2cfP184eJCjPAWAGBQcHBISAQCqTD4EbAFYRHOEXCQVQ0uoKY2Lj4hEQgSEpKTklNSkvPMEJVkJkVmp0DBNm5efkFhXnZ2cFFxSgKSvKCQ0KBoLTMo7wivbIqNKjaBUVBTW0dCNQ31DU2Nbe01tW1xSJb0d7R2dXd3dPb1z9h4qTJU+KTp/ZUTJs+A6Fg5qzZwcHB2XPmzptvaFCyYOEiIC+4avESuIKly3KWLw9dsTIcxElevmo1kLu8as1auIJ16zds3LRxcxfIa1uq8/I2btq0KW9rGJIj/bdt39G4c9duIHPGnsYdQLBn78p9yL6YscrSav8Bg4CDBilb5xyaM+eQuUc7ijdjD4cEHzlafKxtpmNwNgiUHrdBUXDwxMlTp1cknTl77vwFINg858JCVBMMTE1sL3pN8Pa+5AkE3j6uRobosXmgbvllOLhyFRGbsARjeM288voRMLhx89ZthAI5GMvmzt179x88SEh5+OjxkxiYKD8DJyL9rbQARWhI6fpwhJg8g4IinGP68KkzCDxDyCspM6gIGOABqmoMjIIiuOXVNYB5k1FUXBO7tJa2BiM4f+voSitiSkvqKesD5QHJuyx66alWlgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNC0wM1QwODo1MDoyOCswMDowMK/aRJcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDQtMDNUMDg6NTA6MjgrMDA6MDDeh/wrAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU1BMVEX///////////////////////////////////////////////////////////////////////////////////////////7/6K3/2nv/233/8cz/+en/7b//13L/y0b/y0f/347/78b//PP/xS7/xTD/xTH/xC3/yDn/8s//56n/zEj/xzb/xjX/yDv/z1P/zlD/yDz/zlH/78X/343/wyj/wyn/wib/2nz/2HX/xzn/xCz/6bH/yT7/y0T/2Xj/7sP/8tL/2Hf/ykH/8Mn/vhb/vhf/1Gb/+er/6K7/wCD/vxz/6bL//PT/4JP/45v/+/P/+u7/24H/ykT/zUz//vv/3on/wBz/1Gf/34//2Xr/wB3/wB//wSP/6K///Pb/5aH/yD3/yT//y0X/7b3//vr/8tH/2Xf/zk//3YT/+OX/+Oj/1GX/zU7/zU3//ff//PX//fhdoJXvAAAAFXRSTlMAO7r2974/1tpAwfX5vcTdRML6+8W210yTAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+cEAwgyHNfC0TIAAADOSURBVBjTY2BgZGIWhQIWVjYGBkZ2USTAwcnABKLFxCUkpcAiXAzcQFJaRlZOXkFRCcjkYQAJiyurqKqoqWuA2CABTS1tHV09fQNDI6iAsYmpmYG5haWVNURA3EbV1s7ewdFJVcsZLGDs4urmLuqh4unq5Q0W8PGV9/MPCAySDxYPgZgRGhYeEWkZFR0TCzU0Ll43wSYxISk5BSQA8khqmpaBQXpGJthhvCDXZGXn5ErkgVh8DGwcIL/k5fsUgPj8AgwMnIJCML8KiwgwAACR6CYpy9QxwgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wNC0wM1QwODo1MDoyOCswMDowMK/aRJcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDQtMDNUMDg6NTA6MjgrMDA6MDDeh/wrAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgImlkIjogIi8iLAogICAgIm5hbWUiOiAiSGl2ZUxpbmsiLAogICAgImRlc2NyaXB0aW9uIjogIlByb2dldHRvIHNhbHZhdGFnZ2lvIGNvbWUgZGVtbyIsCiAgICAic2hvcnRfbmFtZSI6ICJIaXZlTGluayIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9mYXZpY29ucy9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9mYXZpY29ucy9hbmRyb2lkLWNocm9tZS0zODR4Mzg0LnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIzODR4Mzg0IiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICAgInN0YXJ0X3VybCI6ICIuLi8iCn0K">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab-279ecb48.svg" color="#ffbc00">
+  <link rel="shortcut icon" href="/assets/favicon-1bad7493.ico">
+  <meta name="apple-mobile-web-app-title" content="HiveLink">
+  <meta name="application-name" content="HiveLink">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <script type="module" crossorigin src="/assets/index-df889ecd.js"></script>
+  <link rel="stylesheet" href="/assets/index-49c55c2a.css">
+</head>
+
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+      </path>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path fill="currentColor" d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+      </path>
+      <path fill="currentColor"
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+      </path>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+      </path>
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle bordo25 dark-color">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center bordo25 bianco" id="bd-theme"
+      type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+      <svg class="bi my-1 theme-icon-active bianco" width="1em" height="1em">
+        <use href="#moon-stars-fill"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <img src="/assets/logolungo-efd3006a.png" alt="Logo lungo hivelink" class="logolungo">
+      </div>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+        <ul class="navbar-nav me-auto"></ul>
+        <ul class="navbar-nav justify-content-center flex-nowrap">
+          <button id="rels" type="button"
+            class="btn btn-warning order-2 flex-fill mt-mq">RELOAD</button>
+          <div class="btn-group order-1 m-r mt-mq">
+            <button id="1hbtn" class="switcher btn btn-light active"
+              aria-current="page">1H</button>
+            <button id="2hbtn" class="switcher btn btn-light">2H</button>
+            <button id="4hbtn" class="switcher btn btn-light">4H</button>
+            <button id="6hbtn" class="switcher btn btn-light">6H</button>
+            <button id="wholebtn" class="switcher btn btn-light">ALL</button>
+          </div>
+      </div>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <main role="main" class="margini">
+
+    <table class="table table-bordered tabella">
+      <thead>
+        <tr>
+          <td colspan="2">
+            <center>
+              <b>LIVE DATA</b>
+            </center>
+            <div class="d-flex justify-content-center w-100">
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Automatic refresh</label>
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+              </div>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🕒 Latest reading</td>
+          <td>
+            <span id="datelbl">-</span> at <span id="timelbl">-</span>
+          </td>
+        </tr>
+        <tr>
+          <td>🌡️ Temperature</td>
+          <td>
+            <span id="templbl">-</span> C°
+          </td>
+        </tr>
+        <tr>
+          <td>💧 Humidity</td>
+          <td>
+            <span id="umidlbl">-</span>%
+          </td>
+        </tr>
+        <tr>
+          <td>🌧️ Pressure</td>
+          <td>
+            <span id="presslbl">-</span> Kpa
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <canvas class="m-r2" id="graficoTemperatura" width="100%"></canvas>
+    <canvas class="m-r2" id="graficoUmidita" width="100%"></canvas>
+    <canvas class="m-r2" id="graficoPressione" width="100%"></canvas>
+
+  </main>
+
+</body>
+
+</html>
