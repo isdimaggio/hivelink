@@ -1,0 +1,49 @@
+@import "bootstrap/scss/bootstrap";
+
+body {
+  padding-top: 0px !important;
+}
+
+.logolungo {
+  height: 35px;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.bordo25{
+  border-radius: 25px;
+}
+
+.dark-color{
+  background-color: #212529;
+}
+
+.bianco {
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .mt-mq {
+    margin-top: 10px;
+    margin-right: 0px !important;
+  }
+  .flex-col{
+    flex-direction: column;
+  }
+}
+
+.m-r{
+  margin-right: 8px;
+}
+
+.margini {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tabella {
+  border-color: --bs-body-color;
+}
